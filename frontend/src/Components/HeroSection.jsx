@@ -1,0 +1,57 @@
+import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline';
+
+const HeroSection = () => {
+    const gradientStyle = {
+        background: 'linear-gradient(90deg, rgba(3,37,65,0.7905287114845938) 100%, rgba(3,37,65,0.44879201680672265) 100%), url(https://c4.wallpaperflare.com/wallpaper/970/533/107/spiderman-ps4-spiderman-games-hd-wallpaper-preview.jpg)',
+        backgroundSize: 'cover', // Make sure the image covers the entire container
+    };
+
+    return (
+        <>
+            <div className="relative isolate overflow-hidden py-16 sm:py-24 lg:py-18" style={gradientStyle}>
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div className="mx-auto grid grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none">
+                        <div className="">
+                            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Welcome.</h2>
+                            <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl">Millions of movies, TV shows and people to discover. Explore now..</h2>
+
+                            <div className="mt-6 flex ">
+                                <label htmlFor="email-address" className="sr-only">
+                                    Email address
+                                </label>
+                                <input
+                                    id="email-address"
+                                    name="email"
+                                    type="email"
+                                    autoComplete="email"
+                                    required
+                                    className="min-w-0 flex-auto rounded-tl-2xl rounded-bl-2xl  border-0 bg-white px-3.5 py-2 shadow-sm ring-white/10 focus:outline-none sm:text-sm sm:leading-2"
+                                    placeholder='Search for a movie'
+                                />
+                                <button
+                                    type="submit"
+                                    className="flex-none  bg-gradient-to-r from-emerald-300 to-cyan-600 px-10 py-2.5 text-sm 
+                                    font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 
+                                    focus-visible:outline-offset-2 rounded-tr-2xl rounded-br-2xl"
+                                >
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6" aria-hidden="true">
+                    <div
+                        className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+                        style={{
+                            clipPath:
+                                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                        }}
+                    />
+                </div>
+            </div>
+        </>
+    );
+}
+
+export default HeroSection;
