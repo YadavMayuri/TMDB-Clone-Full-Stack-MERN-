@@ -1,11 +1,15 @@
 import HeroSection from "./HeroSection";
+import SliderSection from "./SliderSection";
+import MovieList from "./sliderMovies/MovieList";
 
-const Home =()=>{
-    return(
+const Home = () => {
+    return (
         <>
-        <HeroSection/>
-        
-        
+            <HeroSection />
+            <SliderSection title="Trending">
+                <MovieList/>
+            </SliderSection>
+
         </>
     )
 }

@@ -1,8 +1,7 @@
-import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline';
 
 const HeroSection = () => {
     const gradientStyle = {
-        background: 'linear-gradient(90deg, rgba(3,37,65,0.7905287114845938) 100%, rgba(3,37,65,0.44879201680672265) 100%), url(https://c4.wallpaperflare.com/wallpaper/970/533/107/spiderman-ps4-spiderman-games-hd-wallpaper-preview.jpg)',
+        background: 'linear-gradient(90deg, rgba(3,37,65,0.84375) 100%, rgba(3,37,65,0.8997724089635855) 100%), url(https://c4.wallpaperflare.com/wallpaper/970/533/107/spiderman-ps4-spiderman-games-hd-wallpaper-preview.jpg)',
         backgroundSize: 'cover', // Make sure the image covers the entire container
     };
 
@@ -12,8 +11,8 @@ const HeroSection = () => {
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto grid grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none">
                         <div className="">
-                            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Welcome.</h2>
-                            <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl">Millions of movies, TV shows and people to discover. Explore now..</h2>
+                            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-5xl">Welcome.</h2>
+                            <h4 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl  pt-2">Millions of movies, TV shows and people to discover. Explore now..</h4>
 
                             <div className="mt-6 flex ">
                                 <label htmlFor="email-address" className="sr-only">
@@ -25,14 +24,14 @@ const HeroSection = () => {
                                     type="email"
                                     autoComplete="email"
                                     required
-                                    className="min-w-0 flex-auto rounded-tl-2xl rounded-bl-2xl  border-0 bg-white px-3.5 py-2 shadow-sm ring-white/10 focus:outline-none sm:text-sm sm:leading-2"
-                                    placeholder='Search for a movie'
+                                    className="min-w-0 flex-auto rounded-tl-2xl rounded-bl-2xl  border-0 bg-white px-3.5 py-2 shadow-sm ring-white/10 focus:outline-none md:text-md sm:leading-2 "
+                                    placeholder='Search for a movie...'
                                 />
                                 <button
                                     type="submit"
-                                    className="flex-none  bg-gradient-to-r from-emerald-300 to-cyan-600 px-10 py-2.5 text-sm 
-                                    font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 
-                                    focus-visible:outline-offset-2 rounded-tr-2xl rounded-br-2xl"
+                                    className="flex-none  bg-gradient-to-r from-emerald-300 to-cyan-600 px-10 py-2.5 text-md 
+                                    font-bold text-white shadow-sm focus-visible:outline focus-visible:outline-2 
+                                    focus-visible:outline-offset-2 rounded-tr-2xl rounded-br-2xl hover:text-black"
                                 >
                                     Search
                                 </button>
