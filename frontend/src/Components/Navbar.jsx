@@ -1,12 +1,14 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon, BellIcon } from '@heroicons/react/24/outline'
+import { useNavigate } from 'react-router-dom'
+
 
 const navigation = [
 
-    { name: 'Popular', href: '#', current: false },
-    { name: 'Top Rated', href: '#', current: false },
-    { name: 'Upcoming', href: '#', current: false },
+    { name: 'Popular', router: '/popular', current: false },
+    { name: 'Top Rated',router: '/toprated', current: false },
+    { name: 'Upcoming', router: '/upcoming', current: false },
 ]
 
 function classNames(...classes) {
@@ -14,11 +16,19 @@ function classNames(...classes) {
 }
 
 
-
 const Navbar = () => {
+
+    const route = useNavigate()
+
+    const handlenavigate = (router) =>{
+        route(router)
+    }
+
+
+
     return (
         <>
-            <Disclosure as="nav" className="bg-sky-950">
+            <Disclosure as="nav" className="bg-sky-950 ">
                 {({ open }) => (
                     <>
                         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -48,10 +58,10 @@ const Navbar = () => {
                                             {navigation.map((item) => (
                                                 <a
                                                     key={item.name}
-                                                    href={item.href}
+                                                    onClick={()=>handlenavigate(item.router)}
                                                     className={classNames(
                                                         item.current ? 'bg-gray-900 text-white ' : 'text-white hover:bg-sky-900 hover:text-white',
-                                                        'rounded-md px-3 py-2 text-sm font-semibold '
+                                                        'rounded-md px-3 py-2 text-sm font-semibold cursor-pointer'
                                                     )}
                                                     aria-current={item.current ? 'page' : undefined}
                                                 >

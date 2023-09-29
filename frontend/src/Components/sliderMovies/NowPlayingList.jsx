@@ -3,17 +3,19 @@ import axios from "axios";
 import MovieCard from "./MovieCard";
 import Loader from "./Loader";
 
-const MovieList = () => {
+const NowPlayingList = () => {
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(false)
+
 
     useEffect(() => {
 
         const fetchTrendingMovies = async () => {
             setLoading(true)
+
             try {
                 console.log("inside fetchTranding");
-                const response = await axios.get('http://localhost:5000/movies/getTranding');
+                const response = await axios.get('http://localhost:5000/movies/getNowPlaying');
                 const newMovies = response.data.results;
                 console.log(newMovies, "newmovies");
                    // Format the release_date before setting it in the state
@@ -30,7 +32,8 @@ const MovieList = () => {
 
             } catch (error) {
                 console.error("Error occured while fetching trending movies:", error);
-            } finally {
+            }
+            finally {
                 setLoading(false)
             }
         };
@@ -43,7 +46,7 @@ const MovieList = () => {
 
             {loading ? (
                 <>
-                    <div className="flex px-5 overflow-x-auto ">
+                    <div className="flex px-5 overflow-x-auto">
                         {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
                             <Loader key={index} />
                         ))}
@@ -60,9 +63,8 @@ const MovieList = () => {
 
                 </>
             )}
-
         </>
     );
 };
 
-export default MovieList;
+export default NowPlayingList;
