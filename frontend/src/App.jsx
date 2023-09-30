@@ -6,9 +6,14 @@ import Footer from './Components/Footer';
 import PopularMovies from './Components/PopularMovies';
 import TopRated from './Components/TopRated';
 import UpcomingMovies from './Components/UpcomingMovies';
+import UserRegister from './Components/UserRegister';
+import Login from './Components/Login';
+import { useContext } from 'react';
+import { AuthContext } from './Components/Context/AuthContext';
 
 
 function App() {
+  const { state } = useContext(AuthContext);
 
   return (
     <div className="App">
@@ -18,6 +23,12 @@ function App() {
         <Route exact path='/popular' element={<PopularMovies />} />
         <Route exact path='/toprated' element={<TopRated />} />
         <Route exact path='/upcoming' element={<UpcomingMovies />} />
+        <Route exact path='/register' element={<UserRegister />} />
+        <Route exact path='/login' element={<Login />} />
+
+
+
+
 
 
       </Routes>

@@ -1,20 +1,21 @@
 
 const HeroSection = () => {
     const gradientStyle = {
-        background: 'linear-gradient(90deg, rgba(3,37,65,0.84375) 100%, rgba(3,37,65,0.8997724089635855) 100%), url(https://c4.wallpaperflare.com/wallpaper/970/533/107/spiderman-ps4-spiderman-games-hd-wallpaper-preview.jpg)',
-        backgroundSize: 'cover', // Make sure the image covers the entire container
+        background: 'linear-gradient(90deg, rgba(3,37,65,0.84375) 100%, rgba(3,37,65,0.8997724089635855) 100%), url(https://images5.alphacoders.com/532/532559.jpg)',
+        backgroundSize: 'cover',
+        // backgroundRepeat: 'no-repeat',
     };
 
     return (
         <>
-            <div className="relative isolate overflow-hidden py-16 sm:py-24 lg:py-18" style={gradientStyle}>
+            <div className="relative isolate overflow-hidden py-16 sm:py-24 lg:py-14" style={gradientStyle}>
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto grid grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none">
                         <div className="">
-                            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-5xl">Welcome.</h2>
-                            <h4 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl  pt-2">Millions of movies, TV shows and people to discover. Explore now..</h4>
+                            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-5xl pt-12">Welcome.</h2>
+                            <h4 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl  pt-4">Millions of movies, TV shows and people to discover. Explore now..</h4>
 
-                            <div className="mt-6 flex ">
+                            <div className="mt-10 flex ">
                                 <label htmlFor="email-address" className="sr-only">
                                     Email address
                                 </label>
