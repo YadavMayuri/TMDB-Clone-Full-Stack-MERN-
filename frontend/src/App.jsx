@@ -10,6 +10,7 @@ import UserRegister from './Components/UserRegister';
 import Login from './Components/Login';
 import { useContext } from 'react';
 import { AuthContext } from './Components/Context/AuthContext';
+import SinglePageDetails from './Components/SinglePageDetails';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route exact path='/popular' element={<PopularMovies />} />
         <Route exact path='/toprated' element={<TopRated />} />
         <Route exact path='/upcoming' element={<UpcomingMovies />} />
+        <Route exact path='/singlepagedetails/:id' element={<SinglePageDetails />} />
         <Route exact path='/register' element={<UserRegister />} />
         <Route exact path='/login' element={<Login />} />
 

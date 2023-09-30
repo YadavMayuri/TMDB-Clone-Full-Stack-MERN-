@@ -66,3 +66,35 @@ export const getUpcoming = async (req, res) => {
 
 }
 
+
+
+export const getSingleMovie = async (req, res) => {
+    try {
+        const id = req.params.id;
+        console.log(id,"id");
+        if(!id) return res.status(400).json({error: "Id is required!"})
+        const movies = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}`);
+        if(!movies) return res.json({error: "Movie not found!"})
+        console.log(movies.data,"movie data");
+        return res.json(movies.data);
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json("Internal server error!");
+    }
+};
+
+
+export const getCastDetails = async (req, res) => {
+    try {
+        const id = req.params.id;
+        console.log(id,"id");
+        if(!id) return res.status(400).json({error: "Id is required!"})
+        const movies = await axios.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${api_key}`);
+        if(!movies) return res.json({error: "Movie not found!"})
+        console.log(movies.data,"movie data");
+        return res.json(movies.data);
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json("Internal server error!");
+    }
+};

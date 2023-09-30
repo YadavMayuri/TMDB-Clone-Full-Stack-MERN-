@@ -52,42 +52,77 @@ const UserRegister = () => {
             router('/')
         }
 
-    },[state])
+    }, [state])
 
 
     return (
         <>
             <div className="mx-auto w-[95%] md:flex gap-6">
-                <div className="md:w-[23%]   border my-7  rounded-md shadow-md">
+                <div className="md:w-[23%]   border my-4  rounded-md shadow-md">
                     <div className="w-full bg-sky-400 font-semibold text-xl px-6 py-4 rounded-md text-white">
                         Benefits of being a member
                     </div>
                     <div className="bg-white font-normal text-sm rounded-md px-6 py-4">
-                        <div className="py-1">
-                            Find something to watch on your subscribed streaming services
+                        <div className="py-1 flex gap-2">
+                            <div className="text-sm font-extrabold">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 ">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+                            </div>
+                            <span>Find something to watch on your subscribed streaming services</span>
                         </div>
-                        <div className="py-1">
-                            Log the movies and TV shows you have watched
+                        <div className="py-1 flex gap-2">
+                            <div className="text-sm font-extrabold">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 ">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+                            </div>
+                            <span>Log the movies and TV shows you have watched</span>
                         </div>
-                        <div className="py-1">
-                            Keep track of your favourite movies and TV shows and get recommendations from them
+                        <div className="py-1 flex gap-2">
+                            <div className="text-sm font-extrabold">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+                            </div>
+                            <span>  Keep track of your favourite movies and TV shows and get recommendations from them</span>
                         </div>
-                        <div className="py-1">
-                            Build and maintain a personal watchlist
+                        <div className="py-1 flex gap-2">
+                            <div className="text-sm font-extrabold">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 ">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+                            </div>
+                            <span> Build and maintain a personal watchlist</span>
                         </div>
-                        <div className="py-1">
-                            Build custom mixed lists (movies and TV)
+                        <div className="py-1 flex gap-2">
+                            <div className="text-sm font-extrabold">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+                            </div>
+                            <span> Build custom mixed lists (movies and TV)</span>
                         </div>
-                        <div className="py-1">
-                            Take part in movie and TV discussions
+                        <div className="py-1 flex gap-2">
+                            <div className="text-sm font-extrabold">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+                            </div>
+                            <span> Take part in movie and TV discussions</span>
                         </div>
-                        <div className="py-1">
-                            Contribute to, and improve the information in our database
+                        <div className="py-1 flex gap-2">
+                            <div className="text-sm font-extrabold">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 ">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+                            </div>
+                            <span>Contribute to, and improve the information in our database</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="md:w-[76%]   my-7 ">
+                <div className="md:w-[76%]   my-4 ">
                     <h1 className="font-bold text-2xl">Sign up for an account</h1>
                     <p className="py-2">Signing up for an account is free and easy. Fill out the form below to get started. JavaScript is required to to continue.</p>
 

@@ -10,7 +10,6 @@ const SliderSection = ({ title, children }) => {
                     {children}
                 </div>
 
-
             </section>
         </>
     )
