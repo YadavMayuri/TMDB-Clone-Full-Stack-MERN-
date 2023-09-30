@@ -31,7 +31,7 @@ const UserRegister = () => {
             if (response.data.success) {
                 setuserData({ name: '', email: '', password: '', confirmPassword: '' })
                 router('/login')
-                return Toast.success(response.data.success)
+                return Toast.success(response.data.message)
             } else {
                 return Toast.error(response.data.message)
             }
@@ -52,7 +52,7 @@ const UserRegister = () => {
             router('/')
         }
 
-    }, [state])
+    },[state])
 
 
     return (
@@ -100,7 +100,7 @@ const UserRegister = () => {
                                 <input
                                     className="w-full px-3 py-2 border rounded-md focus:outline-sky-300 focus:shadow-outline"
                                     type="text"
-                                    name="username"
+                                    name="name"
                                     placeholder=""
                                     onChange={handleChange}
                                 />
@@ -148,9 +148,7 @@ const UserRegister = () => {
                             <p className="mb-4 ">By clicking the "Sign up" button below, I certify that I have read and agree to the TMDB terms of use and privacy policy.</p>
                             <button
                                 className="py-2 px-6 font-bold bg-sky-400 text-white rounded-md hover:bg-sky-500 focus:outline-none focus:shadow-outline"
-                                type="button"
-                            >
-                                Sign Up
+                                type="submit">Sign Up
                             </button>
                         </form>
                     </div>

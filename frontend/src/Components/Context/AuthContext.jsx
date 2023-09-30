@@ -26,10 +26,10 @@ const HandleAuthContext = ({ children }) => {
     useEffect(() => {
         async function getcurrentuser() {
             const token = JSON.parse(localStorage.getItem("TMDBJwtToken"))
-            // console.log("token here",token);
+            console.log("token here",token);
             if (token) {
                 const response = await axios.post("http://localhost:5000/getCurrentUser", { token })
-                // console.log(response,"response here from auth context");
+                console.log(response.data,"response here from auth context");
                 if (response.data.success) {
                     dispatch({
                         type: "LOGIN",

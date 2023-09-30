@@ -60,7 +60,7 @@ const TopRated = () => {
                 ) : (
                     <div className="  flex flex-wrap justify-between gap-2  ">
                         {movies.map((movie, index) => (
-                            <div className="mb-10 shadow-md rounded-md cursor-pointer " key={index}>
+                            <div className="mb-10 shadow-md rounded-md cursor-pointer border" key={index}>
                                 <img src={`https://image.tmdb.org/t/p/w440_and_h660_face/${movie.poster_path} `} alt={movie.title} className="w-[10rem] h-[14rem] shadow-sm rounded-md" />
                                 <div className="flex flex-col w-[10rem] px-2 py-3">
                                     <h1 className="font-bold hover:text-cyan-500">{movie.title}</h1>

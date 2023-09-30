@@ -6,7 +6,7 @@ export const getTranding = async (req, res) => {
     try {
         console.log(api_key,"apikey");
         const MovieData = await axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=${api_key}`);
-        console.log(MovieData.data);
+        // console.log(MovieData.data);
         return res.json(MovieData.data);
     } catch (error) {
         console.error(error);
@@ -19,7 +19,7 @@ export const getTranding = async (req, res) => {
 export const getNowPlaying = async (req, res) => {
     try {
         const MovieData = await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${api_key}`);
-        console.log(MovieData.data);
+        // console.log(MovieData.data);
         return res.json(MovieData.data);
     } catch (error) {
         console.error(error);
