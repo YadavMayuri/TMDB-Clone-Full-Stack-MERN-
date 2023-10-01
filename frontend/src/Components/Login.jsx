@@ -72,7 +72,7 @@ const Login = () => {
 
                 <div className="  my-7 ">
                     <h1 className="font-bold text-2xl">Login to your account</h1>
-                    <p className="py-2">In order to use the editing and rating capabilities of TMDB, as well as get personal recommendations you will need to login to your account. If you do not have an account, registering for an account is free and simple. <span className="text-sky-500 cursor-pointer hover:underline">Click here</span> to get started.</p>
+                    <p className="py-2">In order to use the editing and rating capabilities of TMDB, as well as get personal recommendations you will need to login to your account. If you do not have an account, registering for an account is free and simple. <span className="text-sky-500 cursor-pointer hover:underline" onClick={()=>router('/register')}>Click here</span> to get started.</p>
 
                     <div className=" mt-2">
                         <form onSubmit={handleSubmit} method="post">

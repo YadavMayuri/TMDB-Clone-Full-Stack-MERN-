@@ -1,5 +1,41 @@
+import axios from 'axios';
+import { useState } from 'react';
+import Toast from "react-hot-toast";
 
 const HeroSection = () => {
+
+    const [movie, setMovie] = useState('');
+
+
+    const handleSearch = async () => {
+        try {
+            console.log("inside search");
+           
+            const response = await axios.post("http://localhost:5000/movies/searchMovie", {movie: movie})
+           
+            const movieData = response.data;
+            console.log(movieData, "inside movie data");
+        
+            if (movieData.results && movieData.results.length > 0) {
+              // Assuming the first result is the desired movie
+              const movieId = movieData.results[0]?.id;
+        
+              if (movieId) {
+                // Redirect to the movie detail page using window.location.href
+                window.location.href = `/singlepagedetails/${movieId}`;
+              } else {
+                console.log('No movie ID found');
+              }
+            } else {
+              Toast.error('No results found');
+            //   setMovie('')
+            }
+          } catch (error) {
+            console.error(error);
+            // Handle error
+          }
+    };
+
     const gradientStyle = {
         background: 'linear-gradient(90deg, rgba(3,37,65,0.84375) 100%, rgba(3,37,65,0.8997724089635855) 100%), url(https://images5.alphacoders.com/532/532559.jpg)',
         backgroundSize: 'cover',
@@ -13,11 +49,11 @@ const HeroSection = () => {
                     <div className="mx-auto grid grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none">
                         <div className="">
                             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-5xl pt-12">Welcome.</h2>
-                            <h4 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl  pt-4">Millions of movies, TV shows and people to discover. Explore now..</h4>
+                            <h4 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl  pt-6">Millions of movies, TV shows and people to discover. Explore now..</h4>
 
                             <div className="mt-10 flex ">
                                 <label htmlFor="email-address" className="sr-only">
-                                    Email address
+                                    Search for a movie...
                                 </label>
                                 <input
                                     id="email-address"
@@ -27,12 +63,15 @@ const HeroSection = () => {
                                     required
                                     className="min-w-0 flex-auto rounded-tl-2xl rounded-bl-2xl  border-0 bg-white px-3.5 py-2 shadow-sm ring-white/10 focus:outline-none md:text-md sm:leading-2 "
                                     placeholder='Search for a movie...'
+                                    value={movie}
+                                    onChange={(e) => setMovie(e.target.value)}
                                 />
                                 <button
                                     type="submit"
                                     className="flex-none  bg-gradient-to-r from-emerald-300 to-cyan-600 px-10 py-2.5 text-md 
                                     font-bold text-white shadow-sm focus-visible:outline focus-visible:outline-2 
                                     focus-visible:outline-offset-2 rounded-tr-2xl rounded-br-2xl hover:text-black"
+                                    onClick={handleSearch}
                                 >
                                     Search
                                 </button>

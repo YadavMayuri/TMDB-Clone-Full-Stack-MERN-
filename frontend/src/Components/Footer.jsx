@@ -1,4 +1,9 @@
+import { useContext } from 'react';
+import { AuthContext } from './Context/AuthContext';
+
 const Footer = () => {
+
+    const { state, dispatch } = useContext(AuthContext)
     return (
 
         <footer className="bg-sky-950">
@@ -10,10 +15,10 @@ const Footer = () => {
                             <div className=" mb-10 ">
                                 <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" className="h-20 w-auto" alt="" />
                             </div>
-
-                            <span className=" text-cyan-500  font-bold text-lg border py-2 px-4 rounded-md bg-white  ">
-                                Mayuri_2521
-                            </span>
+                            {state?.user?(  <span className=" text-cyan-500  font-bold text-lg border py-2 px-4 rounded-md bg-white  ">
+                              {state?.user?.name}
+                            </span>):(<></>)}
+                          
 
                         </div>
                         <div>

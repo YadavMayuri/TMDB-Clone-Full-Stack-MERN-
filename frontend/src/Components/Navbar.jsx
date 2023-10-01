@@ -52,23 +52,23 @@ const Navbar = () => {
                                         )}
                                     </Disclosure.Button>
                                 </div>
-                                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                                    <div className="flex flex-shrink-0 items-center">
+                                <div className="flex flex-1 items-center ml-9  sm:items-stretch sm:justify-start sm:ml-0">
+                                    <div className="flex flex-shrink-0 items-center" onClick={()=>router('/')}>
                                         <img
-                                            className="h-5 w-auto"
+                                            className="h-5 w-auto cursor-pointer"
                                             src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
                                             alt="Your Company"
                                         />
                                     </div>
                                     <div className="hidden sm:ml-6 sm:block">
-                                        <div className="flex space-x-4">
+                                        <div className="flex space-x-1">
                                             {navigation.map((item) => (
                                                 <a
                                                     key={item.name}
                                                     onClick={() => handlenavigate(item.router)}
                                                     className={classNames(
                                                         item.current ? 'bg-gray-900 text-white ' : 'text-white hover:bg-sky-900 hover:text-white',
-                                                        'rounded-md px-3 py-2 text-sm font-semibold cursor-pointer'
+                                                        'rounded-md px-2 py-2 text-sm font-semibold cursor-pointer'
                                                     )}
                                                     aria-current={item.current ? 'page' : undefined}
                                                 >
@@ -80,7 +80,7 @@ const Navbar = () => {
 
                                 </div>
 
-                                {state?.user? (<>
+                                {state?.user ? (<>
                                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                                         {/* <button
                                             type="button"
@@ -109,10 +109,10 @@ const Navbar = () => {
                                                 leaveTo="transform opacity-0 scale-95"
                                             >
                                                 <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                                                   
+
                                                     <Menu.Item>
                                                         {({ active }) => (
-                                                            <a  onClick={LOGOUT} className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 cursor-pointer')}>Sign out
+                                                            <a onClick={LOGOUT} className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 cursor-pointer')}>Sign out
                                                             </a>
                                                         )}
                                                     </Menu.Item>
@@ -122,10 +122,10 @@ const Navbar = () => {
                                     </div>
                                 </>) : (
                                     <>
-                                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                                        <div  className='text-white text-sm cursor-pointer  font-semibold rounded-md px-3 py-2 hover:bg-sky-900 ' onClick={() => router('/login')}>Login</div>
-                                        <div className='text-white text-sm cursor-pointer  font-semibold rounded-md px-3 py-2 hover:bg-sky-900 '  onClick={() => router('/register')}>Join TMDB</div>
-                                     </div>
+                                        <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                                            <div className='text-white text-sm cursor-pointer  font-semibold rounded-md px-3 py-2 hover:bg-sky-900 ' onClick={() => router('/login')}>Login</div>
+                                            <div className='text-white text-sm cursor-pointer  font-semibold rounded-md px-3 py-2 hover:bg-sky-900 ' onClick={() => router('/register')}>Join TMDB</div>
+                                        </div>
 
                                     </>)}
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
 
 const PopularMovies = () => {
     const router = useNavigate()
@@ -51,7 +52,7 @@ const PopularMovies = () => {
                         <div className="  flex flex-wrap justify-between gap-2 ">
                             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map((index) => (
                                 <div className="mb-10 shadow-md rounded-md " key={index}>
-                                    <img src="https://fl-1.cdn.flockler.com/embed/no-image.svg" alt="" className="w-[10rem] h-[14rem] shadow-sm rounded-md object-cover" />
+                                    <img src={"https://fl-1.cdn.flockler.com/embed/no-image.svg"} alt="" className="w-[10rem] h-[14rem] shadow-sm rounded-md object-cover" />
 
                                 </div>
                             ))}
