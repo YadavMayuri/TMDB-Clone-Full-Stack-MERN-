@@ -10,30 +10,32 @@ const HeroSection = () => {
     const handleSearch = async () => {
         try {
             console.log("inside search");
-           
-            const response = await axios.post("http://localhost:5000/movies/searchMovie", {movie: movie})
-           
+
+            const response = await axios.post("http://localhost:5000/movies/searchMovie", { movie: movie })
+
             const movieData = response.data;
             console.log(movieData, "inside movie data");
-        
+
             if (movieData.results && movieData.results.length > 0) {
-              // Assuming the first result is the desired movie
-              const movieId = movieData.results[0]?.id;
-        
-              if (movieId) {
-                // Redirect to the movie detail page using window.location.href
-                window.location.href = `/singlepagedetails/${movieId}`;
-              } else {
-                console.log('No movie ID found');
-              }
+                // Assuming the first result is the desired movie
+                const movieId = movieData.results[0]?.id;
+
+                if (movieId) {
+                    // Redirect to the movie detail page using window.location.href
+                    window.location.href = `/singlepagedetails/${movieId}`;
+                    setMovie('')
+
+                } else {
+                    console.log('No movie ID found');
+                }
             } else {
-              Toast.error('No results found');
-            //   setMovie('')
+                Toast.error('No results found');
+                // setMovie('')
             }
-          } catch (error) {
+        } catch (error) {
             console.error(error);
             // Handle error
-          }
+        }
     };
 
     const gradientStyle = {
@@ -71,8 +73,7 @@ const HeroSection = () => {
                                     className="flex-none  bg-gradient-to-r from-emerald-300 to-cyan-600 px-10 py-2.5 text-md 
                                     font-bold text-white shadow-sm focus-visible:outline focus-visible:outline-2 
                                     focus-visible:outline-offset-2 rounded-tr-2xl rounded-br-2xl hover:text-black"
-                                    onClick={handleSearch}
-                                >
+                                    onClick={handleSearch}>
                                     Search
                                 </button>
                             </div>

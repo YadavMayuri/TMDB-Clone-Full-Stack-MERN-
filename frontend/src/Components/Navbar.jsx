@@ -53,7 +53,7 @@ const Navbar = () => {
                                     </Disclosure.Button>
                                 </div>
                                 <div className="flex flex-1 items-center ml-9  sm:items-stretch sm:justify-start sm:ml-0">
-                                    <div className="flex flex-shrink-0 items-center" onClick={()=>router('/')}>
+                                    <div className="flex flex-shrink-0 items-center" onClick={() => router('/')}>
                                         <img
                                             className="h-5 w-auto cursor-pointer"
                                             src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
@@ -82,21 +82,12 @@ const Navbar = () => {
 
                                 {state?.user ? (<>
                                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                                        {/* <button
-                                            type="button"
-                                            className="relative rounded-full  p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                                        >
-                                            <span className="absolute -inset-1.5" />
-                                            <span className="sr-only">View notifications</span>
-                                            <BellIcon className="h-6 w-6" aria-hidden="true" />
-                                        </button> */}
-                                        {/* Profile dropdown */}
                                         <Menu as="div" className="relative ml-3">
                                             <div>
-                                                <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                                                <Menu.Button className="relative flex rounded-full bg-cyan-600 text-sm focus:outline-none  ">
                                                     <span className="absolute -inset-1.5" />
                                                     <span className="sr-only">Open user menu</span>
-                                                    <span className='text-white text-sm cursor-pointer  font-semibold rounded-md px-3 py-2 hover:bg-sky-900 '>{state.user.name}</span>
+                                                    <span className='text-white text-sm cursor-pointer  font-semibold rounded-md px-3 py-2 '> {state.user.name.charAt(0)}</span>
                                                 </Menu.Button>
                                             </div>
                                             <Transition
@@ -108,14 +99,27 @@ const Navbar = () => {
                                                 leaveFrom="transform opacity-100 scale-100"
                                                 leaveTo="transform opacity-0 scale-95"
                                             >
-                                                <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-
+                                                <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ">
+                                                    {state?.user ? (
+                                                        <Menu.Item>
+                                                                <a className= 'block px-4 py-1 text-sm text-gray-700 font-bold'>Hi , {state?.user?.name}
+                                                                </a>
+                                                        </Menu.Item>
+                                                    ) : (<></>)}
+                                                    {state?.user ? (
+                                                        <Menu.Item>
+                                                                <a className='block px-4 py-1 text-sm text-gray-700 '> {state?.user?.email}
+                                                                </a>
+                                                        </Menu.Item>
+                                                    ) : (<></>)}
+                                                    <hr className='mt-2'/>
                                                     <Menu.Item>
                                                         {({ active }) => (
-                                                            <a onClick={LOGOUT} className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 cursor-pointer')}>Sign out
+                                                            <a onClick={LOGOUT} className={classNames(active ? 'bg-sky-950 text-white' : '', 'block px-4 py-2 text-sm text-gray-700 cursor-pointer')}>Log out
                                                             </a>
                                                         )}
                                                     </Menu.Item>
+
                                                 </Menu.Items>
                                             </Transition>
                                         </Menu>

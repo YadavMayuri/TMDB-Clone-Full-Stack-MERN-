@@ -41,7 +41,7 @@ const Login = () => {
                 localStorage.setItem("TMDBJwtToken", JSON.stringify(response.data.token))
                 console.log(response.data.user, "user response from login payload");
                 setUserData({ email: "", password: "" });
-                router('/');
+                window.location.reload()
                 Toast.success(response.data.message);
             } else {
                 Toast.error(response.data.message);
@@ -59,7 +59,7 @@ const Login = () => {
 
     useEffect(() => {
         if (state?.user?.name) {
-            Toast.success("You are already logged in.")
+            Toast.success("You are logged in.")
             router('/')
 
         }

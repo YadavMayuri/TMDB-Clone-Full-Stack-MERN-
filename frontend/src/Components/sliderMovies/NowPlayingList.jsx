@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import MovieCard from "./MovieCard";
 import Loader from "./Loader";
+import { useNavigate } from "react-router-dom";
 
 const NowPlayingList = () => {
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(false)
+    const router = useNavigate()
 
 
     useEffect(() => {
@@ -57,7 +59,7 @@ const NowPlayingList = () => {
                 <>
                     <div className="flex px-5 overflow-x-auto">
                         {movies.map((movie, index) => (
-                            <MovieCard key={index} title={movie.title} date={movie.release_date} rating={movie.vote_average * 10 === 0 ? 'NR' : `${(movie.vote_average * 10).toFixed()}%`} imgURL={`https://image.tmdb.org/t/p/w440_and_h660_face/${movie.poster_path}`} />
+                            <MovieCard key={index} title={movie.title} date={movie.release_date} rating={movie.vote_average * 10 === 0 ? 'NR' : `${(movie.vote_average * 10).toFixed()}%`} imgURL={`https://image.tmdb.org/t/p/w440_and_h660_face/${movie.poster_path}`}  details={()=> router(`/singlepagedetails/${movie.id}`)} />
                         ))}
                     </div>
 
