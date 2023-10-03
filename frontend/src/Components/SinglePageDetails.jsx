@@ -40,7 +40,6 @@ const SinglePageDetails = () => {
         background: `linear-gradient(to bottom right, rgba(31.5, 31.5, 52.5, 1), rgba(31.5, 31.5, 52.5, 0.84)),
         url(${movie.backdrop_path ? `https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${movie.backdrop_path}` :
                 `https://www.echollywell.co.uk/wp-content/uploads/blank-00cc00_040004000.png`})`,
-                
     };
 
 
@@ -67,7 +66,7 @@ const SinglePageDetails = () => {
 
                         <p className='text-white text-[1rem] pt-3 flex items-center flex-wrap '>
                             <span className='border px-1 text-gray-500 mr-2 '>UA</span>
-                            <span > {movie.release_date}</span> 
+                            <span > {movie.release_date}</span>
                             {movie.production_countries && movie.production_countries.length > 0 ? (
                                 movie.production_countries.map(country => (
                                     <span key={country.iso_3166_1} className="ml-1">({country.iso_3166_1})</span>
