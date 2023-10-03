@@ -28,7 +28,7 @@ First you have to go to the `Home Page`. There you have to click on Log in / Joi
 
   **Home Page**
 
-  ![homePage](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/1313fdf3-dea4-436b-bb05-1d03989f154f)
+  ![HomePage](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/76179c54-c8dd-46cc-8071-35456b5117d3)
 
   **Sign-up Page**
 
@@ -36,7 +36,7 @@ First you have to go to the `Home Page`. There you have to click on Log in / Joi
 
   **Login Page**
 
-  ![login](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/37283e98-3dfe-4d95-a56b-d5046f77ce2b)
+![login](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/4c135fca-63fa-464d-b4e2-1260c29aeb15)
 
   **Category Page** - Popular Category
 
@@ -44,7 +44,7 @@ First you have to go to the `Home Page`. There you have to click on Log in / Joi
 
   **Movie Details Page**
 
-  ![MovieDetailsPage](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/5398dfac-a3e5-494e-80d0-9028b3f19009)
+  ![MovieDetailsPage](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/7c8de927-34ef-47a1-aa2c-e5d31b517fe4)
 
    **Search Movie**
 
@@ -52,7 +52,7 @@ First you have to go to the `Home Page`. There you have to click on Log in / Joi
 
   **Searched Movie Result Page**
 
-  ![SearchResultPage](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/09449a09-3799-4458-a31c-584ca2b207cc)
+ ![SearchResultPage](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/511d6445-c6b6-4028-a1a2-4daba3554d17)
 
   **Logout**
 
