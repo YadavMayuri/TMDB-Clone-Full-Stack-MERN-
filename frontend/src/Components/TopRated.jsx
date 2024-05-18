@@ -14,7 +14,7 @@ const TopRated = () => {
         const fetchTrendingMovies = async () => {
             setLoading(true)
             try {
-                const response = await axios.get('http://localhost:5000/movies/getTopRated');
+                const response = await axios.get('http://localhost:8000/movies/getTopRated');
                 const newMovies = response.data.results;
                 console.log(newMovies, "newmovies");
                   // Format the release_date before setting it in the state

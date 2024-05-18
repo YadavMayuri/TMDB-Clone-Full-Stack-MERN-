@@ -15,7 +15,7 @@ const MovieList = () => {
             setLoading(true)
             try {
                 console.log("inside fetchTranding");
-                const response = await axios.get('http://localhost:5000/movies/getTranding');
+                const response = await axios.get('http://localhost:8000/movies/getTranding');
                 const newMovies = response.data.results;
                 console.log(newMovies, "newmovies");
                 // Format the release_date before setting it in the state

@@ -11,7 +11,7 @@ const HeroSection = () => {
         try {
             console.log("inside search");
 
-            const response = await axios.post("http://localhost:5000/movies/searchMovie", { movie: movie })
+            const response = await axios.post("http://localhost:8000/movies/searchMovie", { movie: movie })
 
             const movieData = response.data;
             console.log(movieData, "inside movie data");
