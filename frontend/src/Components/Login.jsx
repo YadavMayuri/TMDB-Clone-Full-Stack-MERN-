@@ -41,7 +41,9 @@ const Login = () => {
                 localStorage.setItem("TMDBJwtToken", JSON.stringify(response.data.token))
                 console.log(response.data.user, "user response from login payload");
                 setUserData({ email: "", password: "" });
-                window.location.reload()
+                // window.location.reload()
+                router('/')
+
                 Toast.success(response.data.message);
             } else {
                 Toast.error(response.data.message);
