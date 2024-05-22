@@ -24,39 +24,46 @@ A TMDB (The Movie Database) clone that allows users to sign up, log in, log out,
 ## How to Use 📖🔍
 First you have to go to the `Home Page`. There you have to click on Log in / Join TMDB button to get to the `sign up & login page`. Then user will be redirected to home page. The movies can be sorted according to `Categories`. Click on the movie image to view the details of that movie. Click on the `search bar` in home page to search movies and it will redirected to its details page.  
 
- ## Screenshots 📷
+## API Reference
 
-  **Home Page**
+- **TMDB API :** https://developer.themoviedb.org/reference/intro/getting-started
 
-  ![HomePage](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/76179c54-c8dd-46cc-8071-35456b5117d3)
+- **API KEY** : 2374e1b4236c522cbc5011efab33785d
 
-  **Sign-up Page**
+## Screenshots 📷
 
-  ![signUp](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/acf225e8-3d1b-4fa8-accb-ca5237750e53)
+**Home Page**
 
-  **Login Page**
+![HomePage](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/76179c54-c8dd-46cc-8071-35456b5117d3)
+
+**Sign-up Page**
+
+![signUp](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/acf225e8-3d1b-4fa8-accb-ca5237750e53)
+
+**Login Page**
 
 ![login](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/4c135fca-63fa-464d-b4e2-1260c29aeb15)
 
-  **Category Page** - Popular Category
+**Category Page** - Popular Category
 
-  ![popularMovies](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/af7e84d3-ee2e-4d7b-85e9-c937a93ad0cb)
+![PopularMovies](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/9f33e867-036b-4626-bb6e-b959afc8d1fe)
 
-  **Movie Details Page**
 
-  ![MovieDetailsPage](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/7c8de927-34ef-47a1-aa2c-e5d31b517fe4)
+**Movie Details Page**
 
-   **Search Movie**
+![MovieDetailsPage](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/7c8de927-34ef-47a1-aa2c-e5d31b517fe4)
 
-   ![searchMovie](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/9513d96f-8b32-455f-899f-5c75c84474c6)
+**Search Movie**
 
-  **Searched Movie Result Page**
+![searchMovie](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/9513d96f-8b32-455f-899f-5c75c84474c6)
 
- ![SearchResultPage](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/511d6445-c6b6-4028-a1a2-4daba3554d17)
+**Searched Movie Result Page**
 
-  **Logout**
+![SearchResultPage](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/511d6445-c6b6-4028-a1a2-4daba3554d17)
 
-  ![logout](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/e9434d9f-d076-41c8-9664-a782964880d8)
+**Logout**
+
+![logout](https://github.com/YadavMayuri/TMDB-Clone-Full-Stack-MERN-/assets/126373490/e9434d9f-d076-41c8-9664-a782964880d8)
 
 
 
