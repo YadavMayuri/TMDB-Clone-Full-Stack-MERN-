@@ -28,7 +28,7 @@ const HandleAuthContext = ({ children }) => {
             const token = JSON.parse(localStorage.getItem("TMDBJwtToken"))
             console.log("token here",token);
             if (token) {
-                const response = await axios.post("http://localhost:8000/getCurrentUser", { token })
+                const response = await axios.post("https://tmdb-clone-full-stack-mern.onrender.com/getCurrentUser", { token })
                 console.log(response.data,"response here from auth context");
                 if (response.data.success) {
                     dispatch({

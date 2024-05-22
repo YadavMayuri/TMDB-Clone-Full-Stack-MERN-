@@ -17,7 +17,7 @@ const NowPlayingList = () => {
 
             try {
                 console.log("inside fetchTranding");
-                const response = await axios.get('http://localhost:8000/movies/getNowPlaying');
+                const response = await axios.get('https://tmdb-clone-full-stack-mern.onrender.com/movies/getNowPlaying');
                 const newMovies = response.data.results;
                 console.log(newMovies, "newmovies");
                 // Format the release_date before setting it in the state

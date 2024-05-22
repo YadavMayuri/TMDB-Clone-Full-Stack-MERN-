@@ -16,8 +16,8 @@ const SinglePageDetails = () => {
             setLoading(true)
             try {
                 console.log(id);
-                const response = await axios.get(`http://localhost:8000/movies/getSingleMovie/${id}&language=en-US`);
-                const castRes = await axios.get(`http://localhost:8000/movies/getCastDetails/${id}`);
+                const response = await axios.get(`https://tmdb-clone-full-stack-mern.onrender.com/movies/getSingleMovie/${id}&language=en-US`);
+                const castRes = await axios.get(`https://tmdb-clone-full-stack-mern.onrender.com/movies/getCastDetails/${id}`);
                 const movieData = response.data
                 const cast = castRes.data
                 console.log(movieData, "movieData");

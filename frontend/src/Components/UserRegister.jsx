@@ -22,7 +22,7 @@ const UserRegister = () => {
         const { name, email, password, confirmPassword } = userData;
         console.log(name, email, password, confirmPassword, "userData");
         try {
-            const response = await axios.post('http://localhost:8000/register', {
+            const response = await axios.post('https://tmdb-clone-full-stack-mern.onrender.com/register', {
                 name: userData.name,
                 email: userData.email,
                 password: userData.password,

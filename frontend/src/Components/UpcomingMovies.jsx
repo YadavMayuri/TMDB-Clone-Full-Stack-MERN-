@@ -15,7 +15,7 @@ const UpcomingMovies = () => {
         const fetchTrendingMovies = async () => {
             setLoading(true)
             try {
-                const response = await axios.get('http://localhost:8000/movies/getUpcoming');
+                const response = await axios.get('https://tmdb-clone-full-stack-mern.onrender.com/movies/getUpcoming');
                 const newMovies = response.data.results;
                 console.log(newMovies, "newmovies");
                  // Format the release_date before setting it in the state
