@@ -87,7 +87,7 @@ const Navbar = () => {
                                                 <Menu.Button className="relative flex rounded-full bg-cyan-600 text-sm focus:outline-none  ">
                                                     <span className="absolute -inset-1.5" />
                                                     <span className="sr-only">Open user menu</span>
-                                                    <span className='text-white text-sm cursor-pointer  font-semibold rounded-md px-3 py-2 '> {state.user.name.charAt(0)}</span>
+                                                    <span className='text-white text-sm cursor-pointer  font-semibold capitalize rounded-md px-3 py-2 '> {state.user.name.charAt(0)}</span>
                                                 </Menu.Button>
                                             </div>
                                             <Transition
@@ -102,7 +102,7 @@ const Navbar = () => {
                                                 <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ">
                                                     {state?.user ? (
                                                         <Menu.Item>
-                                                                <a className= 'block px-4 py-1 text-sm text-gray-700 font-bold'>Hi , {state?.user?.name}
+                                                                <a className= 'block px-4 py-1 text-sm text-gray-700 font-bold capitalize'>Hi , {state?.user?.name}
                                                                 </a>
                                                         </Menu.Item>
                                                     ) : (<></>)}

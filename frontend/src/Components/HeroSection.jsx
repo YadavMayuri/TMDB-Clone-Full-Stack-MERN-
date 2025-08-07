@@ -67,6 +67,12 @@ const HeroSection = () => {
                                     placeholder='Search for a movie...'
                                     value={movie}
                                     onChange={(e) => setMovie(e.target.value)}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter') {
+                                            e.preventDefault();
+                                            handleSearch();
+                                        }
+                                    }}
                                 />
                                 <button
                                     type="submit"

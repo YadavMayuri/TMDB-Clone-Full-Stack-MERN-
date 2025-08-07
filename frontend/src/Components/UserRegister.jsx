@@ -133,7 +133,7 @@ const UserRegister = () => {
                                     Username
                                 </label>
                                 <input
-                                    className="w-full px-3 py-2 border rounded-md focus:outline-sky-300 focus:shadow-outline"
+                                    className="w-full px-3 py-2 border rounded-md focus:outline-sky-300 focus:shadow-outline capitalize"
                                     type="text"
                                     name="name"
                                     placeholder=""
